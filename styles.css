@@ -1,0 +1,281 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+   background-color: #FFE6E6;
+}
+
+.container {
+    display: block;
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #E1AFD1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 12px rgb(5, 5, 5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+.container:not(.hide) {
+    opacity: 1;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+   
+}
+
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+
+    padding: 2px 7px 8px 1px;
+}
+
+ul li {
+    margin: 10px;
+    margin: auto;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    box-shadow: 2px 2px 2px black;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+.delete-btn {
+    border-radius: 50%;
+    position: relative;
+    float: right;
+    margin-left: 5px;
+    padding: 4px 4px;
+}
+.navbar {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0; /* Stick to the top of the viewport */
+    background-color: #333; /* Background color for the navbar */
+    padding: 10px; /* Padding inside the navbar */
+    z-index: 1000; /* Ensure the navbar appears above other content */
+}
+
+
+/* Style for the list inside the navbar */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for each list item */
+.navbar ul li {
+    display: inline-block;
+    margin-right: 140px; /* Add space between list items */
+    color: white; /* Text color for list items */
+    box-shadow: 4px 4px 4px whitesmoke;
+    cursor: pointer;
+    
+}
+.navbar ul li:hover{
+    color: #000;
+    background-color: #fff;
+}
+
+
+
+.hide{
+    display: none;
+}
+@keyframes slide {
+    0% { transform: translateX(0); } /* Start with no translation */
+    50% { transform: translateX(20px); } /* Slide to the right */
+    100% { transform: translateX(0); } /* Return to the initial position */
+}
+
+h1 {
+    animation: slide 2s ease infinite alternate; /* Apply the slide animation to h1 element, with a duration of 2 seconds, easing function 'ease', infinite repetitions, and alternate direction */
+}
+
+
+
+/* Additional Responsive Styles */
+@media (max-width: 768px) {
+    /* Adjust container width and margin */
+    .container {
+        width: 90%;
+        margin: 20px auto;
+    }
+    
+    /* Make input field full width */
+    input[type="text"],
+    button {
+        width: 96%;
+    }
+
+    /* Adjust delete button size */
+    .delete-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+    .navbar ul li {
+        display: inline-block;
+        margin-right: 10px; /* Add space between list items */
+        color: white; /* Text color for list items */
+        box-shadow: 4px 4px 4px whitesmoke;
+        
+    }
+}
+@media (max-width: 800px) {
+    /* Adjust container width and margin */
+    .container {
+        width: 90%;
+        margin: 20px auto;
+    }
+    
+    /* Make input field full width */
+    input[type="text"],
+    button {
+        width: 96%;
+    }
+
+    /* Adjust delete button size */
+    .delete-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+    .navbar ul li {
+        display: inline-block;
+        margin-right: 10px; /* Add space between list items */
+        color: white; /* Text color for list items */
+        box-shadow: 4px 4px 4px whitesmoke;
+        
+    }
+}
+
+
+/* Further Responsive Styles for Width between 300px and 500px */
+@media (max-width: 500px) {
+    /* Further adjust container width and margin */
+    .container {
+        width: 90%;
+        margin: 10px auto;
+        padding: 2px; /* Adjust padding */
+    }
+    
+    /* Make input field full width */
+    input[type="text"],
+    button {
+        width: 92%;
+    }
+
+    /* Further adjust delete button size */
+    .delete-btn {
+        width: 25px;
+        height: 25px;
+        font-size: 10px;
+        padding: 2px; /* Further adjust padding */
+    }
+    
+    /* Decrease heading font size */
+    h1 {
+        font-size: 24px;
+    }
+    .navbar ul li {
+        display: inline-block;
+        margin-right: 10px; /* Add space between list items */
+        color: white; /* Text color for list items */
+        box-shadow: 4px 4px 4px whitesmoke;
+        
+    }
+}
+
+@media (max-width: 300px) {
+    /* Further adjust container width and margin */
+    .container {
+        width: 90%;
+        margin: 10px auto;
+        padding: 2px; /* Adjust padding */
+    }
+    
+    /* Make input field full width */
+    input[type="text"],
+    button {
+        width: 90%;
+    }
+
+    /* Further adjust delete button size */
+    .delete-btn {
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+        padding: 2px; /* Further adjust padding */
+    }
+    
+    /* Decrease heading font size */
+    h1 {
+        font-size: 24px;
+    }
+    .navbar ul li {
+        display: inline-block;
+        margin-right: 0px; /* Add space between list items */
+        color: white; /* Text color for list items */
+        box-shadow: 4px 4px 4px whitesmoke;
+        
+    }
+    
+}
+@media (max-width: 200px) {
+    /* Adjust container width and margin */
+    .container {
+        width: 90%;
+        margin: 20px auto;
+    }
+    
+    /* Make input field full width */
+    input[type="text"],
+    button {
+        width: 96%;
+    }
+
+    /* Adjust delete button size */
+    .delete-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+    .navbar ul li {
+        display: inline-block;
+        margin-right: 0px; /* Add space between list items */
+        color: white; /* Text color for list items */
+        box-shadow: 4px 4px 4px whitesmoke;
+        
+    }
+}
+
+
